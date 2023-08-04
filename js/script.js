@@ -46,7 +46,6 @@ searchBtn.addEventListener('click', () => {
     let lowerValue = searchInputValue.toLowerCase();
     // Get the weather data for the searched city
     let mainData = citiesData[lowerValue];
-
     // If the weather data for the searched city exists
     if (mainData) {
         // Display the weather data for the searched city
