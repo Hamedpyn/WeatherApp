@@ -1,14 +1,23 @@
-﻿// Declare variables to select the elements from the HTML page
-let city = document.querySelector('.city'); // To display the city name
-let temp = document.querySelector('.temp'); // To display the temperature
-let humidity = document.querySelector('.humidity'); // To display the humidity percentage
-let wind = document.querySelector('.wind'); // To display the wind speed
-let searchBtn = document.querySelector('.search button'); // To select the search button
-let searchInput = document.querySelector('.search input'); // To select the search input
-let weather = document.querySelector('.weather'); // To select the weather container
-let weatherStatus = document.querySelector('.description'); // To display the weather status
+﻿// DOM Selectors
 
-// Declare an object to store weather data for different cities
+// To display the city name
+let city = document.querySelector('.city');
+// To display the temperature
+let temp = document.querySelector('.temp'); 
+// To display the humidity percentage
+let humidity = document.querySelector('.humidity');
+// To display the wind speed
+let wind = document.querySelector('.wind'); 
+// To select the search button
+let searchBtn = document.querySelector('.search button'); 
+// To select the search input
+let searchInput = document.querySelector('.search input'); 
+// To select the weather container
+let weather = document.querySelector('.weather'); 
+// To display the weather status
+let weatherStatus = document.querySelector('.description'); 
+
+// Declaring an object to store weather data for different cities
 let citiesData = {
     tehran: { city: 'Tehran', temp: '33', weather: 'Sunny', humidity: '20%', wind: '2.6' },
     shiraz: { city: 'Shiraz', temp: '3', weather: 'Snow', humidity: '60%', wind: '8.9' },
@@ -49,7 +58,7 @@ searchBtn.addEventListener('click', () => {
         weather.classList.remove('loading');
     } else {
         // Display an alert message if the weather data for the searched city does not exist
-        alert('این صفحه یک تست است و از شهر های زیادی استفاده نکردم . لطفا شهر دیگری را استفاده کنید\n - This page is anexercise and I did not use many cities.Please use another city');
+        alert('این صفحه یک تست است و از شهر های زیادی استفاده نکردم . لطفا شهر دیگری را استفاده کنید\n - This page is an exercise and I did not use many cities.Please use another city');
     }
 });
 
