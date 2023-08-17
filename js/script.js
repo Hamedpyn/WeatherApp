@@ -28,7 +28,7 @@ searchBtn.addEventListener('click', () => {
     // Get the weather data for the searched city
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchInputValue}&units=metric&appid=5986e34809c3c329649d1f7703faa5e9`).then(res => res.json()).then(data => {
         if (data.name === undefined) {
-            alert(`شهر شما وجود خارجی ندارد. \n Your city doesn's exsit.`)
+            alert(`شهر شما وجود خارجی ندارد. \n Your city doesn't exist.`)
         } else {
             // Display the weather data for the searched city
             city.innerHTML = `Weather in ${data.name}`;
