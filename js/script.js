@@ -21,8 +21,14 @@ let city = document.querySelector('.city'),
     // To display the weather status
     weatherStatus = document.querySelector('.description');
 
-// Add an event listener to the search button
-searchBtn.addEventListener('click', () => {
+
+// Keyboard event
+document.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') {
+        displayWeather()
+    }
+})
+function displayWeather() {
     // Get the value of the search input
     let searchInputValue = searchInput.value;
     // Get the weather data for the searched city
@@ -39,4 +45,7 @@ searchBtn.addEventListener('click', () => {
             weather.classList.remove('loading');
         }
     })
-});
+}
+
+// Add an event listener to the search button
+searchBtn.addEventListener('click', displayWeather)
